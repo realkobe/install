@@ -1,14 +1,14 @@
 mount /dev/sr0 /mnt
 cd /etc/yum.repos.d/
-#mkdir bak
-#mv openEuler.repo bak
+mkdir bak
+mv openEuler.repo bak
 
-touch openeuler.repo
-echo "[file]" >> openeuler.repo
-echo "name=iso" >> openeuler.repo
-echo "baserurl=file:///mnt/" >> openeuler.repo
-echo "enabled=1" >> openeuler.repo
-echo "gpgcheck=0" >> openeuler.repo
+touch openEuler.repo
+echo "[file]" >> openEuler.repo
+echo "name=iso" >> openEuler.repo
+echo "baserurl=file:///mnt/" >> openEuler.repo
+echo "enabled=1" >> openEuler.repo
+echo "gpgcheck=0" >> openEuler.repo
 
 
 yum makecache
