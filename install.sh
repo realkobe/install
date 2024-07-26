@@ -13,9 +13,7 @@ echo "gpgcheck=0" >> openeuler2.repo
 
 yum makecache
 yum install vim
-y
 yum install httpd
-y
 #systemctl status httpd
 systemctl start httpd
 systemctl status httpd
