@@ -6,7 +6,7 @@ mv openEuler.repo bak
 touch openEuler.repo
 echo "[file]" >> openEuler.repo
 echo "name=iso" >> openEuler.repo
-echo "baserurl=file:///mnt/" >> openEuler.repo
+echo "baseurl=file:///mnt/" >> openEuler.repo
 echo "enabled=1" >> openEuler.repo
 echo "gpgcheck=0" >> openEuler.repo
 
