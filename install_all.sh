@@ -1,7 +1,7 @@
 #nmcli c show
 ens=$(nmcli c show | awk 'NR==2{print $4}')
 #read -p "Enter ens:" ens
-echo $ens--------------------
+echo $ens --------------------
 #nmcli c edit $ens
 #goto ipv4
 read -p "Enter ip:" ip
@@ -24,7 +24,7 @@ cat /etc/sysconfig/network-scripts/ifcfg-$ens
 
 echo ip add show--------------
 ip add show
-echo nmcli d reapply $ens------------------
+echo nmcli d reapply $ens -------------------
 nmcli d reapply $ens
 echo systemctl restart NetworkManager---------------------
 systemctl restart NetworkManager
