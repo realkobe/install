@@ -1,5 +1,6 @@
 #nmcli c show
-read -p "Enter ens:" ens
+#read -p "Enter ens:" ens
+ens=$(nmcli c show | awk 'NR==2{print $4}')
 nmcli c edit $ens
 goto ipv4
 read -p "Enter ip:" ip
