@@ -29,12 +29,12 @@ cat /etc/sysconfig/network-scripts/ifcfg-$ens
 
 echo ip add show--------------
 ip add show
-#echo nmcli d reapply $ens -------------------
-#nmcli d reapply $ens
-ifdown $ens
-ifup $ens
+#ifdown $ens
+#ifup $ens
 echo systemctl restart NetworkManager---------------------
 systemctl restart NetworkManager
+echo nmcli d reapply $ens -------------------
+nmcli d reapply $ens
 
 echo mount /dev/sr0 /mnt-----------------
 mount /dev/sr0 /mnt
