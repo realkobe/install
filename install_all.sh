@@ -15,10 +15,14 @@ read -p "Enter gateway:" gateway
 #set autoconnect yes
 #save
 #quit
-sed -i 's/IPADDR.*/IPADDR='$ip'/g' /etc/sysconfig/network-scripts/ifcfg-$ens
-sed -i 's/PREFIX.*/PREFIX=24/g' /etc/sysconfig/network-scripts/ifcfg-$ens
-sed -i 's/GATEWAY.*/GATEWAY='$gateway'/g' /etc/sysconfig/network-scripts/ifcfg-$ens
-sed -i 's/DNS1.*/DNS1=119.29.29.29/g' /etc/sysconfig/network-scripts/ifcfg-$ens
+sed -i '$a IPADDR='$ip /etc/sysconfig/network-scripts/ifcfg-$ens
+sed -i '$a PREFIX=24' /etc/sysconfig/network-scripts/ifcfg-$ens
+sed -i '$a GATEWAY='$gateway /etc/sysconfig/network-scripts/ifcfg-$ens
+sed -i '$a DNS1=119.29.29.29' /etc/sysconfig/network-scripts/ifcfg-$ens
+#sed -i 's/IPADDR.*/IPADDR='$ip'/g' /etc/sysconfig/network-scripts/ifcfg-$ens
+#sed -i 's/PREFIX.*/PREFIX=24/g' /etc/sysconfig/network-scripts/ifcfg-$ens
+#sed -i 's/GATEWAY.*/GATEWAY='$gateway'/g' /etc/sysconfig/network-scripts/ifcfg-$ens
+#sed -i 's/DNS1.*/DNS1=119.29.29.29/g' /etc/sysconfig/network-scripts/ifcfg-$ens
 sed -i 's/ONBOOT.*/ONBOOT=yes/g' /etc/sysconfig/network-scripts/ifcfg-$ens
 cat /etc/sysconfig/network-scripts/ifcfg-$ens
 
