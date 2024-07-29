@@ -63,6 +63,8 @@ yum install httpd
 #systemctl status httpd
 echo systemctl start httpd----------------------
 systemctl start httpd
+echo systemctl enable httpd----------------------
+systemctl enable httpd
 #systemctl status httpd
 echo ss -antip--------------------
 ss -antip
