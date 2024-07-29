@@ -16,6 +16,7 @@ yum install vim
 yum install httpd
 #systemctl status httpd
 systemctl start httpd
+systemctl enable httpd
 #systemctl status httpd
 ss -antip
 
