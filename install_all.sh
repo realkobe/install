@@ -29,8 +29,10 @@ cat /etc/sysconfig/network-scripts/ifcfg-$ens
 
 echo ip add show--------------
 ip add show
-echo nmcli d reapply $ens -------------------
-nmcli d reapply $ens
+#echo nmcli d reapply $ens -------------------
+#nmcli d reapply $ens
+ifdown $ens
+ifup $ens
 echo systemctl restart NetworkManager---------------------
 systemctl restart NetworkManager
 
